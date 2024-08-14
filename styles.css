@@ -1,0 +1,198 @@
+/* Variáveis de estilo */
+:root {
+    --primary-color: #3d56c3; /* Cor de fundo principal */
+    --secondary-color: #007BFF; /* Cor de fundo para botões e links */
+    --secondary-color-hover: #0056b3; /* Cor de fundo para botões e links ao passar o cursor */
+    --text-color: white; /* Cor do texto */
+    --background-color: #ffffff; /* Cor de fundo para áreas de texto */
+    --shadow-color: rgba(0, 0, 0, 0.3); /* Cor da sombra para elementos */
+    --shadow-color-light: rgba(0, 0, 0, 0.1); /* Cor da sombra mais clara */
+    --shadow-color-lighter: rgba(0, 0, 0, 0.2); /* Cor da sombra mais clara */
+    --footer-text-color: #ffffff; /* Cor do texto no rodapé */
+    --footer-small-text-color: #ffffff; /* Cor do texto pequeno no rodapé */
+    --input-area-background-color: #f0f0f0; /* Cor de fundo abaixo do quadro de input */
+    --title-text-color: #ffffff; /* Cor do texto dos títulos */
+    --result-text-color: #ffffff; /* Cor do texto "Texto Resultante." */
+}
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh; /* Garante que a página ocupe pelo menos a altura da tela */
+    margin: 0;
+    background-color: var(--primary-color); /* Cor de fundo para melhorar contraste */
+}
+
+/* Estilo para o container principal */
+.container {
+    display: flex;
+    justify-content: space-between; /* Dividir a página em duas partes */
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto; /* Adiciona margem superior e inferior */
+    flex-wrap: wrap;
+}
+
+/* Estilo para as áreas de entrada e saída de texto */
+.left, .right {
+    width: 45%;
+    text-align: center;
+    padding: 0 10px; /* Adiciona padding nos lados para evitar que o conteúdo seja cortado */
+}
+
+textarea, label {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Estilo para a área de texto */
+textarea {
+    width: 100%;
+    min-height: 250px;
+    resize: none; /* Remove a capacidade de redimensionar manualmente */
+    overflow: hidden; /* Esconde barras de rolagem enquanto redimensiona */
+    box-shadow: 2px 2px 5px var(--shadow-color); /* Efeito drop shadow */
+    background-color: var(--background-color);
+    font-size: 20px; /* Ajusta o tamanho da fonte */
+    background-color: var(--input-area-background-color); /* Cor de fundo abaixo do quadro de input */
+}
+
+/* Estilo para os botões */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    background-color: var(--primary-color); /* Fundo branco para destacar os botões */
+    z-index: 1; /* Garante que os botões estejam acima do conteúdo rolável */
+}
+
+/* Estilo individual dos botões */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    box-shadow: 2px 2px 5px var(--shadow-color-light); /* Efeito drop shadow */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-color-hover);
+}
+
+/* Estilo para o rodapé */
+.footer {
+    display: flex;
+    justify-content: flex-end; /* Alinha os itens à direita */
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #447390;
+    box-shadow: 0 -2px 5px var(--shadow-color); /* Efeito drop shadow */
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2; /* Coloca o rodapé acima do conteúdo rolável */
+    height: 10px; /* Ajusta a altura desejada para o rodapé */
+}
+
+/* Estilo para os botões do rodapé */
+.footer-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer-buttons a {
+    padding: 5px 8px; /* Ajusta o padding para o tamanho dos botões */
+    font-size: 12px; /* Ajusta o tamanho da fonte */
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px var(--shadow-color-lighter); /* Efeito drop shadow */
+    transition: background-color 0.3s;
+}
+
+.footer-buttons a:hover {
+    background-color: var(--secondary-color-hover);
+}
+
+.footer p {
+    margin: 20px;  /* Diminui a margem */
+    padding-right: 20px; /* Adiciona padding no lado direito para espaçamento */
+    font-size: 12px;
+    color: var(--footer-small-text-color); /* Cor do texto pequeno */
+}
+
+/* Estilo para a área de apresentação da imagem */
+.image {
+    margin-top: 20px;
+}
+
+.image img {
+    width: 350px;
+    height: 310px;
+    box-shadow: 2px 2px 5px var(--shadow-color-light); /* Efeito drop shadow */
+}
+
+/* Estilo para as mensagens informativas */
+#noMessage, #promptMessage {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--footer-text-color); /* Cor do texto */
+}
+
+/* Estilo para os títulos */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--title-text-color); /* Cor dos títulos */
+}
+
+/* Estilo para a mensagem "Texto Resultante." */
+#resultText {
+    color: var(--result-text-color); /* Cor da mensagem "Texto Resultante." */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Coluna quando minimizado */
+        align-items: center;
+    }
+    
+    .left, .right {
+        width: 100%; /* Ocupar toda a largura */
+        margin-bottom: 20px;
+        padding: 0 20px; /* Adiciona padding nos lados para evitar que o conteúdo seja cortado */
+    }
+
+    .buttons {
+        position: static; /* Remove a posição fixa para manter visível ao rolar */
+        margin-top: 10px; /* Margem superior para separar dos demais conteúdos */
+        background-color: transparent; /* Fundo transparente para manter a estética */
+        width: 100%; /* Garante que os botões ocupem toda a largura */
+    }
+
+    .footer {
+        justify-content: center; /* Centralizar conteúdo do rodapé */
+        text-align: center;
+    }
+
+    .footer-buttons {
+        margin: 0; /* Remove a margem para ajustar centralização */
+        padding-right: 0; /* Remove o padding para ajustar centralização */
+    }
+
+    .footer p {
+        padding-right: 0; /* Remove o padding para ajustar centralização */
+    }
+}

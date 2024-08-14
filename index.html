@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Criptografia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <!-- Título da página -->
+            <h1>MUNDO CRIPTOGRAFIA</h1>
+            <!-- Campo de inserção de texto -->
+            <textarea id="inputText" placeholder="Digite o texto aqui..." oninput="autoResize(this); hideMessages()"></textarea><br>
+            <!-- Botões de ação -->
+            <div class="buttons">
+                <button onclick="encrypt()">Criptografar</button>
+                <button onclick="decrypt()">Descriptografar</button>
+                <button onclick="clearText()">Limpar</button>
+            </div>
+            <label for="story">Digite somente letras minúsculas, sem acentos ou caracteres especiais.</label>
+        </div>
+        <div class="right">
+            <!-- Área de apresentação do texto resultante -->
+            <h2>Texto Resultante</h2>
+            <p id="outputText"></p>
+            <!-- Botão para copiar o texto resultante -->
+            <button onclick="copyToClipboard()">Copiar Texto</button>
+            <!-- Área reservada para a imagem -->
+            <div class="image">
+                <img src="imagem_01_Garoto_de_Lupa.png" alt="Imagem de exemplo">
+            </div>
+            <!-- Mensagens informativas -->
+            <p id="noMessage">Nenhuma mensagem encontrada</p>
+            <p id="promptMessage">Digite um texto que você deseja criptografar ou descriptografar.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-buttons">
+            <a href="https://linkedin.com/in/matheus-fidelis-de-almeida-8b2666250" target="_blank" id="linkedin-button">LinkedIn</a>
+            <a href="https://github.com" target="_blank" id="github-button">GitHub</a>
+            <a href="https://www.alura.com.br" target="_blank" id="alura-button">Alura</a>
+        </div>
+        <p><strong>Matheus Fidelis</strong></p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
